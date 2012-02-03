@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carsystem</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag "jquery", "jquery.lightbox-0.5.min", "jcarousellite_1.0.1", "application" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <div class="geral">
+    <div class="topo">
+      <div class="logo">
+        <%= image_tag("logo.gif") %>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Quem Somos", companies_path %></li>
+          <li><%= link_to "Clientes", clients_path %></li>
+          <li><%= link_to "Localização", locations_path %></li>
+          <li class="bordernone"><%= link_to "Fale Conosco", new_contact_path %></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="horario_funcionamento">
+      <p>
+        De 2ª a 6ª das 8:00 às 18:00 e sábado das 8:30 às 17:30 (horário de Brasília) - exceto feriados. 
+      </p>
+    </div>
+    
+    <div class="vitrine">
+      <ul>
+        <li>
+          <%= image_tag("pecas1.jpg", :width => "625", :height => "220") %>
+        </li>
+        <li>
+          <%= image_tag("pecas2.jpg", :width => "625", :height => "220") %>
+        </li>
+        <li>
+          <%= image_tag("pecas1.jpg", :width => "625", :height => "220") %>
+        </li>
+        <li>
+          <%= image_tag("pecas2.jpg", :width => "625", :height => "220") %>
+        </li>
+      </ul>
+      <div class="nav">
+        <button class="1">1</button>
+        <button class="2">2</button>
+        <button class="3">3</button>
+        <button class="4">4</button>
+      </div>
+    </div>
+    <%= yield %>
+    <div class="rodape">
+      Todos os direitos reservados
+    </div>
+  </div>
+</body>
+</html>
